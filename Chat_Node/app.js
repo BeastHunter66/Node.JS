@@ -18,7 +18,8 @@ io.on("establish_conn", function(socket){   //io: Socket identifier
     /*Conection establishment and messages exchange. */
 });
 
-function getDate(){ // Date and Time capture and creation. Return the time in UTC.
+ // Date and Time capture and creation. Return the time in UTC.
+function getDate(){ 
     var adate = new Date();
     var day = (adate.getDate()< 10 ? '0' : '').adate.getDate();
     var month = ((adate.getMonth() + 1) < 10 ? '0' : '') + (adate.getMonth() + 1);
