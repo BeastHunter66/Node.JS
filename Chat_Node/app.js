@@ -1,13 +1,19 @@
-const httpServer = require('http');
+const httpServer = require('http').createServer(srv_list);
+const io = require('socket.io')(httpServer);
 
 
 const host = 'localhost';
 const port = 3000;
 
-const srv_list = function(req, res) { //srv_list: função servidor.
-    res.writeHead(200);               //server: invocação do servidor.
+function srv_list(req, res) {       //srv_list: config function of the httpServer
+    res.writeHead(200);             //httpServer: srv_list invoker       
     res.end("Servidor rodando.");
 }
 
-const server = httpServer.createServer(srv_list);
-server.listen(port);
+httpServer.listen(port);
+
+//SOCKET CONFIGURATION / LISTENING.
+io.on("establish_conn", function(Socket){   //io: Socket identifier
+
+    /*Conection establishment and messages exchange. */
+});
