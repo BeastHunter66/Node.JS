@@ -10,4 +10,4 @@ const srv_list = function(req, res) { //srv_list: função servidor.
 }
 
 const server = http.createServer(srv_list);
-server.listen(port)
+server.listen(port);
