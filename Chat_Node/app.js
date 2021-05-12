@@ -1,4 +1,4 @@
-const http = require('http');
+const httpServer = require('http');
 
 
 const host = 'localhost';
@@ -9,5 +9,5 @@ const srv_list = function(req, res) { //srv_list: função servidor.
     res.end("Servidor rodando.");
 }
 
-const server = http.createServer(srv_list);
+const server = httpServer.createServer(srv_list);
 server.listen(port);
