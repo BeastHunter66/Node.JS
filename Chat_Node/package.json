@@ -1,0 +1,20 @@
+{
+  "name": "chat_node",
+  "version": "0.0.1",
+  "description": "Implementation of chat service using Sockets for an web application.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Node.JS"
+  },
+  "keywords": [
+    "node",
+    "chat",
+    "test"
+  ],
+  "author": "André Andrade (BeastHunter66)",
+  "license": "GPL-3.0"
+}
