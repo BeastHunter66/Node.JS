@@ -18,7 +18,9 @@
   "author": "André Andrade (BeastHunter66)",
   "license": "GPL-3.0",
   "dependencies": {
+    "fs": "0.0.1-security",
     "nodemon": "^2.0.7",
-    "socket.io": "^4.1.1"
+    "socket.io": "^4.1.1",
+    "url": "^0.11.0"
   }
 }
