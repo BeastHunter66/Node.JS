@@ -5,22 +5,28 @@
 //Any problems, bugs or optimizations feel free to contact me at andrelsandrade42@gmail.com
 //Contents:
 //app.js: Server-Side Node.JS 
-//ioconnect.js: Client-Side connection handler.
-//index.html: home page for the chat box.
+//index.html: home page for the chat box, also contains the client - side socket Handler.
 //package.json: Configuration file for the Node.JS project.
 //---------------------------------------------------------------------------------------------------------------------
+
+//Modules import:
 
 const httpServer = require('http').createServer(srv_list); //HTTP Server.
 const io = require('socket.io')(httpServer);               //Sockets.
 const fs = require('fs');                                  //FileSystem.
 const url = require('url');                                //URL handler.
 
+//----------------------------------------------------------------------------------------------------------//
 
-//HTTP Server base config.
-const host = 'localhost';
+//HTTP Server base config:
+
+const host = '127.0.0.1';
 const port = 3000;
 
+//----------------------------------------------------------------------------------------------------------//
+
 //HTTP server Functionalities:
+
 function srv_list(req, res) {       
     var file = "";
     console.log("req.url: " + req.url);
@@ -46,9 +52,13 @@ function srv_list(req, res) {
     });
 }
 
-httpServer.listen(port);    //HTTP SERVER Listening delcaration
- 
-//SOCKET CONFIGURATION / LISTENING.
+//HTTP SERVER Listening delcaration:
+
+httpServer.listen(port);    
+
+//----------------------------------------------------------------------------------------------------------//
+
+ //SOCKET CONFIGURATION / LISTENING.
 
 io.sockets.on('connection', function(socket) {   //io: Socket identifier. "connection": Event name for opening connection with client.
     /*Conection establishment and messages exchange. */
@@ -57,8 +67,9 @@ io.sockets.on('connection', function(socket) {   //io: Socket identifier. "conne
    });
 });
 
+//----------------------------------------------------------------------------------------------------------//
 
- // Date and Time capture and creation. Return the time in UTC.
+// Date and Time capture and creation. Return the time in UTC.
 function getDate(){ 
     var adate = new Date();
     var day = (adate.getDate()< 10 ? '0' : '').adate.getDate();

@@ -1,6 +1,6 @@
 {
   "name": "chat_node",
-  "version": "0.0.1A",
+  "version": "0.0.1B",
   "description": "Implementation of chat service using Sockets for an web application.",
   "main": "app.js",
   "scripts": {
