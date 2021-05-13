@@ -5,6 +5,7 @@
 //Any problems, bugs or optimizations feel free to contact me at andrelsandrade42@gmail.com
 //Contents:
 //app.js: Server-Side Node.JS 
+//ioconnect.js: Client Side socket handler.
 //index.html: home page for the chat box, also contains the client - side socket Handler.
 //package.json: Configuration file for the Node.JS project.
 //---------------------------------------------------------------------------------------------------------------------
@@ -42,7 +43,7 @@ function srv_list(req, res) {
     fs.readFile(file, function(err, data) {
         if(err) {
             res.writeHead(404, {'Content-Type': 'text/html'})
-            res.end("Couldn´t find the page you want :(")
+            res.end("Couldnt find the page you want :(")
         }else{
             res.writeHead(200, {'Content-Type': 'text/html'});                  
             console.log("Page Found");
