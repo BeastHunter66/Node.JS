@@ -20,15 +20,7 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!--JQuery invoker-->
         <script type="text/javascript" src="">
             
-            jQuery(function($){
-                $('#msg_sd').submit(function(e){
-                    e.preventDefault();
-                    console.log($('#msg_sd input'));
-                    $.post('io.connect.js', $('#msg_sd input'), function(rdata){
-                        alert(rdata);
-                    }, JSON);
-                });
-            });
+            
         
         </script>
        <!--<script type="text/javascript" src="/Chat_Node/ioconnect.js">     //Jquery handler for ioconnect.js.
